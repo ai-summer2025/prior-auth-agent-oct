@@ -1,0 +1,166 @@
+{
+  "version": "2025.10",
+  "policies": {
+    "MRI_brain": {
+      "cpt_codes": ["70553", "70552", "70551"],
+      "indication_tiers": {
+        "approved_no_auth": ["acute_stroke", "intracranial_hemorrhage", "meningitis"],
+        "approved_with_auth": ["headache_persistent", "seizure_disorder", "multiple_sclerosis", "dementia_workup"],
+        "requires_step_therapy": ["chronic_headache", "dizziness_routine"],
+        "typically_denied": ["screening_no_symptoms", "routine_annual"]
+      },
+      "medical_necessity_criteria": [
+        "Symptoms persisting > 6 weeks despite conservative treatment",
+        "Prior imaging showing abnormality requiring follow-up",
+        "Neurological deficits documented on exam",
+        "Failure of >= 2 lines of first-line therapy",
+        "High clinical suspicion for malignancy or infection"
+      ],
+      "typical_denial_reasons": [
+        "Insufficient documentation of conservative treatment failure",
+        "No documented neurological examination findings",
+        "Symptom duration < 6 weeks",
+        "Missing clinical notes supporting medical necessity"
+      ],
+      "appeal_evidence_terms": ["MRI brain clinical utility systematic review", "neuroimaging headache guidelines"],
+      "base_approval_probability": 0.65
+    },
+    "lumbar_MRI": {
+      "cpt_codes": ["72148", "72149", "72158"],
+      "indication_tiers": {
+        "approved_no_auth": ["cauda_equina_syndrome", "spinal_cord_compression_acute", "cancer_metastasis_spine"],
+        "approved_with_auth": ["radiculopathy_with_neuro_deficit", "spinal_stenosis_severe", "spondylolisthesis"],
+        "requires_step_therapy": ["low_back_pain_with_radiculopathy", "herniated_disc_suspected"],
+        "typically_denied": ["low_back_pain_acute", "musculoskeletal_pain_routine"]
+      },
+      "medical_necessity_criteria": [
+        "Low back pain persisting > 6 weeks with documented conservative treatment failure",
+        "Neurological deficits: weakness, sensory loss, or reflex changes",
+        "Failure of physical therapy (>=6 weeks) and NSAIDs",
+        "Clinical suspicion for malignancy, infection, or fracture (red flags)",
+        "Progressive neurological symptoms"
+      ],
+      "typical_denial_reasons": [
+        "Acute presentation < 6 weeks without red flags",
+        "No documented trial of physical therapy",
+        "No neurological deficit documented",
+        "Missing functional status documentation"
+      ],
+      "appeal_evidence_terms": ["lumbar MRI low back pain clinical guidelines appropriateness", "ACP low back pain imaging criteria"],
+      "base_approval_probability": 0.55
+    },
+    "biologics_rheumatoid_arthritis": {
+      "cpt_codes": ["J0135", "J0717", "J2323"],
+      "indication_tiers": {
+        "approved_no_auth": [],
+        "approved_with_auth": ["rheumatoid_arthritis_severe", "psoriatic_arthritis_severe", "ankylosing_spondylitis"],
+        "requires_step_therapy": ["rheumatoid_arthritis_moderate", "psoriatic_arthritis_moderate"],
+        "typically_denied": ["arthralgia_undifferentiated", "osteoarthritis"]
+      },
+      "medical_necessity_criteria": [
+        "Confirmed diagnosis by rheumatologist",
+        "Failure of >= 2 conventional DMARDs (methotrexate + one other) at adequate dose and duration (>=3 months each)",
+        "Active disease: DAS28 score > 3.2 or CDAI > 10",
+        "No active TB or serious infection",
+        "Negative hepatitis B/C screening",
+        "Current or planned DMARD combination therapy"
+      ],
+      "typical_denial_reasons": [
+        "Insufficient DMARD step therapy documentation",
+        "Missing disease activity scores (DAS28/CDAI)",
+        "Rheumatologist consultation not documented",
+        "TB screening not completed or positive",
+        "Incorrect ICD-10 code for indication"
+      ],
+      "appeal_evidence_terms": ["biologic therapy rheumatoid arthritis DMARD failure clinical trial", "TNF inhibitor step therapy appropriateness"],
+      "base_approval_probability": 0.60
+    },
+    "bariatric_surgery": {
+      "cpt_codes": ["43644", "43645", "43647", "43770"],
+      "indication_tiers": {
+        "approved_no_auth": [],
+        "approved_with_auth": ["morbid_obesity_BMI_40_plus", "obesity_BMI_35_with_comorbidities"],
+        "requires_step_therapy": ["obesity_BMI_30_35"],
+        "typically_denied": ["obesity_BMI_under_30", "cosmetic_weight_loss"]
+      },
+      "medical_necessity_criteria": [
+        "BMI >= 40 kg/m2, OR BMI >= 35 kg/m2 with obesity-related comorbidity",
+        "Documented failure of medically supervised weight loss program (>=6 months)",
+        "Psychiatric clearance completed",
+        "No active substance use disorder",
+        "Nutritional counseling completed",
+        "Ability to comply with post-operative dietary requirements"
+      ],
+      "typical_denial_reasons": [
+        "6-month supervised weight loss program not completed or not documented",
+        "Missing psychiatric evaluation",
+        "BMI documentation incomplete (missing height/weight measurements)",
+        "Comorbidities not documented if BMI 35-39"
+      ],
+      "appeal_evidence_terms": ["bariatric surgery outcomes diabetes remission RCT", "RYGB sleeve gastrectomy long term outcomes"],
+      "base_approval_probability": 0.70
+    },
+    "cardiac_catheterization": {
+      "cpt_codes": ["93454", "93455", "93456", "93457"],
+      "indication_tiers": {
+        "approved_no_auth": ["STEMI", "NSTEMI_high_risk", "unstable_angina_refractory"],
+        "approved_with_auth": ["stable_angina_with_positive_stress_test", "known_CAD_symptoms_worsening", "heart_failure_ischemic_evaluation"],
+        "requires_step_therapy": ["chest_pain_atypical", "dyspnea_unexplained"],
+        "typically_denied": ["screening_no_symptoms", "low_risk_chest_pain_ED"]
+      },
+      "medical_necessity_criteria": [
+        "Positive or equivocal non-invasive stress test",
+        "Symptoms refractory to maximal medical therapy",
+        "High pre-test probability of obstructive CAD",
+        "Hemodynamically significant valvular disease evaluation",
+        "Failed non-invasive imaging (inconclusive result)"
+      ],
+      "typical_denial_reasons": [
+        "No prior non-invasive testing documented",
+        "Low pre-test probability without adequate documentation",
+        "Symptoms not refractory to medical management",
+        "Missing cardiology consultation notes"
+      ],
+      "appeal_evidence_terms": ["cardiac catheterization appropriateness criteria AUC coronary artery disease", "invasive coronary angiography guidelines ACC AHA"],
+      "base_approval_probability": 0.75
+    },
+    "genetic_testing_cancer": {
+      "cpt_codes": ["81211", "81215", "81432", "81435"],
+      "indication_tiers": {
+        "approved_no_auth": [],
+        "approved_with_auth": ["personal_history_breast_cancer_high_risk", "family_history_BRCA_known_mutation", "lynch_syndrome_suspicion"],
+        "requires_step_therapy": ["family_history_breast_cancer_moderate"],
+        "typically_denied": ["general_population_screening", "no_personal_or_family_history"]
+      },
+      "medical_necessity_criteria": [
+        "Personal history of breast/ovarian cancer diagnosed <=50",
+        ">=1 first-degree relative with BRCA-related cancer",
+        "Ashkenazi Jewish ancestry with any breast/ovarian cancer",
+        "Colorectal cancer with MSI-H or MMR deficiency",
+        "Family history meeting Amsterdam II criteria for Lynch syndrome"
+      ],
+      "typical_denial_reasons": [
+        "Genetic counseling not completed prior to testing",
+        "Family history documentation insufficient",
+        "Testing does not meet NCCN guideline criteria",
+        "Results would not change clinical management"
+      ],
+      "appeal_evidence_terms": ["BRCA genetic testing clinical utility hereditary breast ovarian cancer", "NCCN genetic testing guidelines hereditary cancer"],
+      "base_approval_probability": 0.68
+    }
+  },
+  "global_denial_factors": {
+    "missing_clinical_notes": -0.25,
+    "symptom_duration_too_short": -0.20,
+    "no_specialist_referral": -0.15,
+    "incomplete_step_therapy": -0.30,
+    "wrong_diagnosis_code": -0.35
+  },
+  "global_approval_factors": {
+    "specialist_letter_of_support": 0.15,
+    "peer_reviewed_evidence_cited": 0.10,
+    "functional_impairment_documented": 0.12,
+    "multiple_failed_treatments": 0.18,
+    "acute_safety_concern": 0.25
+  }
+}

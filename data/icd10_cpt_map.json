@@ -1,0 +1,42 @@
+{
+  "diagnosis_keywords": {
+    "low back pain": {"icd10": "M54.5", "policy_key": "lumbar_MRI", "description": "Low back pain"},
+    "lumbar radiculopathy": {"icd10": "M54.4", "policy_key": "lumbar_MRI", "description": "Lumbago with sciatica"},
+    "herniated disc": {"icd10": "M51.16", "policy_key": "lumbar_MRI", "description": "Intervertebral disc degeneration, lumbar"},
+    "sciatica": {"icd10": "M54.3", "policy_key": "lumbar_MRI", "description": "Sciatica"},
+    "spinal stenosis": {"icd10": "M48.06", "policy_key": "lumbar_MRI", "description": "Spinal stenosis, lumbar region"},
+    "headache": {"icd10": "G44.309", "policy_key": "MRI_brain", "description": "Post-traumatic headache, unspecified"},
+    "migraine": {"icd10": "G43.909", "policy_key": "MRI_brain", "description": "Migraine, unspecified"},
+    "seizure": {"icd10": "G40.909", "policy_key": "MRI_brain", "description": "Epilepsy, unspecified"},
+    "multiple sclerosis": {"icd10": "G35", "policy_key": "MRI_brain", "description": "Multiple sclerosis"},
+    "memory loss": {"icd10": "R41.3", "policy_key": "MRI_brain", "description": "Other amnesia"},
+    "rheumatoid arthritis": {"icd10": "M05.79", "policy_key": "biologics_rheumatoid_arthritis", "description": "Rheumatoid arthritis with rheumatoid factor"},
+    "psoriatic arthritis": {"icd10": "L40.50", "policy_key": "biologics_rheumatoid_arthritis", "description": "Psoriatic arthropathy, unspecified"},
+    "ankylosing spondylitis": {"icd10": "M45.0", "policy_key": "biologics_rheumatoid_arthritis", "description": "Ankylosing spondylitis of multiple sites"},
+    "morbid obesity": {"icd10": "E66.01", "policy_key": "bariatric_surgery", "description": "Morbid (severe) obesity due to excess calories"},
+    "obesity": {"icd10": "E66.09", "policy_key": "bariatric_surgery", "description": "Other obesity due to excess calories"},
+    "chest pain": {"icd10": "R07.9", "policy_key": "cardiac_catheterization", "description": "Chest pain, unspecified"},
+    "stable angina": {"icd10": "I20.9", "policy_key": "cardiac_catheterization", "description": "Angina pectoris, unspecified"},
+    "unstable angina": {"icd10": "I20.0", "policy_key": "cardiac_catheterization", "description": "Unstable angina"},
+    "coronary artery disease": {"icd10": "I25.10", "policy_key": "cardiac_catheterization", "description": "Atherosclerotic heart disease"},
+    "brca mutation": {"icd10": "Z15.01", "policy_key": "genetic_testing_cancer", "description": "Genetic susceptibility to malignant neoplasm of breast"},
+    "family history breast cancer": {"icd10": "Z80.3", "policy_key": "genetic_testing_cancer", "description": "Family history of malignant neoplasm of breast"}
+  },
+  "procedure_keywords": {
+    "mri brain": {"cpt": "70553", "policy_key": "MRI_brain", "description": "MRI brain with and without contrast"},
+    "mri lumbar": {"cpt": "72148", "policy_key": "lumbar_MRI", "description": "MRI lumbar spine without contrast"},
+    "mri spine": {"cpt": "72148", "policy_key": "lumbar_MRI", "description": "MRI lumbar spine without contrast"},
+    "adalimumab": {"cpt": "J0135", "policy_key": "biologics_rheumatoid_arthritis", "description": "Injection, adalimumab, 20 mg"},
+    "humira": {"cpt": "J0135", "policy_key": "biologics_rheumatoid_arthritis", "description": "Injection, adalimumab, 20 mg"},
+    "etanercept": {"cpt": "J1438", "policy_key": "biologics_rheumatoid_arthritis", "description": "Injection, etanercept"},
+    "biologic": {"cpt": "J0135", "policy_key": "biologics_rheumatoid_arthritis", "description": "Biologic agent injection"},
+    "bariatric surgery": {"cpt": "43644", "policy_key": "bariatric_surgery", "description": "Laparoscopic Roux-en-Y gastric bypass"},
+    "gastric bypass": {"cpt": "43644", "policy_key": "bariatric_surgery", "description": "Laparoscopic Roux-en-Y gastric bypass"},
+    "sleeve gastrectomy": {"cpt": "43775", "policy_key": "bariatric_surgery", "description": "Laparoscopic sleeve gastrectomy"},
+    "cardiac catheterization": {"cpt": "93454", "policy_key": "cardiac_catheterization", "description": "Coronary angiography"},
+    "coronary angiogram": {"cpt": "93454", "policy_key": "cardiac_catheterization", "description": "Coronary angiography"},
+    "cath lab": {"cpt": "93454", "policy_key": "cardiac_catheterization", "description": "Coronary angiography"},
+    "genetic testing": {"cpt": "81211", "policy_key": "genetic_testing_cancer", "description": "BRCA1/2 gene analysis"},
+    "brca testing": {"cpt": "81211", "policy_key": "genetic_testing_cancer", "description": "BRCA1/2 gene analysis"}
+  }
+}
